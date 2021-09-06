@@ -19,7 +19,7 @@ const Home = ({allPostsData}) => {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/[psts/${id}]`}>
+              <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br/>
