@@ -3,7 +3,7 @@ import Layout, { siteTitle } from '../components/Layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 
-export default function Home({allPostsData}) {
+const Home = ({allPostsData}) => {
   return (
     <Layout home>
       <Head>
@@ -11,10 +11,6 @@ export default function Home({allPostsData}) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Blind guy extrordinare!</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -33,6 +29,8 @@ export default function Home({allPostsData}) {
     </Layout>
   )
 }
+
+export default Home
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
